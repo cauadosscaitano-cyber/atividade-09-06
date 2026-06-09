@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/layout.css">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <form id="formCadastro" onsubmit="event.preventDefault(); confirmarDados();">
+        <table>
+            <tr>
+                <td colspan="2" class="header-light">Não é associado? Faça seu cadastro</td>
+                <td colspan="2" class="header-dark"></td>
+            </tr>
+
+            <tr>
+                <td width="15%"><label for="nome">Nome</label></td>
+                <td colspan="3"><input type="text" id="nome" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="nomeCompleto">Nome Completo</label></td>
+                <td colspan="3"><input type="text" id="nomeCompleto" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="cpf">CPF</label></td>
+                <td colspan="3"><input type="text" id="cpf" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">E-mail</label></td>
+                <td colspan="3"><input type="email" id="email" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="website">Web Site</label></td>
+                <td colspan="3"><input type="url" id="website"></td>
+            </tr>
+
+            <tr>
+                <td><label for="endereco">Endereço</label></td>
+                <td colspan="3"><input type="text" id="endereco"></td>
+            </tr>
+
+            <tr>
+                <td><label for="bairro">Bairro</label></td>
+                <td width="35%"><input type="text" id="bairro"></td>
+                <td width="10%"><label for="cidade">Cidade</label></td>
+                <td width="40%"><input type="text" id="cidade"></td>
+            </tr>
+
+            <tr>
+                <td><label for="cep">Cep</label></td>
+                <td><input type="tel" id="cep"></td>
+                <td><label for="uf">UF</label></td>
+                <td>
+                    <select id="uf">
+                        <option value="AC">AC</option><option value="AL">AL</option>
+                        <option value="AP">AP</option><option value="AM">AM</option>
+                        <option value="BA">BA</option><option value="CE">CE</option>
+                        <option value="DF">DF</option><option value="ES">ES</option>
+                        <option value="GO">GO</option><option value="MA">MA</option>
+                        <option value="MT">MT</option><option value="MS">MS</option>
+                        <option value="MG">MG</option><option value="PA">PA</option>
+                        <option value="PB">PB</option><option value="PR">PR</option>
+                        <option value="PE">PE</option><option value="PI">PI</option>
+                        <option value="RJ">RJ</option><option value="RN">RN</option>
+                        <option value="RS">RS</option><option value="RO">RO</option>
+                        <option value="RR">RR</option><option value="SC">SC</option>
+                        <option value="SP" selected>SP</option><option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="telefone">Telefone</label></td>
+                <td><input type="tel" id="telefone"></td>
+                <td><label for="fax">Fax</label></td>
+                <td><input type="tel" id="fax"></td>
+            </tr>
+
+            <tr>
+                <td><label for="dataNasc">Data Nascimento</label></td>
+                <td><input type="date" id="dataNasc" placeholder="dd/mm/aaaa"></td>
+                <td>Sexo</td>
+                <td>
+                    <input type="radio" id="sexoM" name="sexo" value="M"> <label for="sexoM">M</label>
+                    <input type="radio" id="sexoF" name="sexo" value="F"> <label for="sexoF">F</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="celular">Celular</label></td>
+                <td><input type="tel" id="celular"></td>
+                <td><label for="estCivil">Est.Civil</label></td>
+                <td>
+                    <select id="estCivil">
+                        <option value="Solteiro">Solteiro</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Viúvo">Viúvo</option>
+                        <option value="Divorciado">Divorciado</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="login">Login</label></td>
+                <td><input type="text" id="login" required></td>
+                <td><label for="senha">Senha</label></td>
+                <td><input type="password" id="senha" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" class="header">
+                    Deseja receber informações sobre os seguintes assuntos abaixo:
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="checkbox-group">
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Tecnologia" id="chk1"> <label for="chk1">Tecnologia</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Esportes" id="chk2"> <label for="chk2">Esportes</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Automóveis" id="chk3"> <label for="chk3">Automóveis</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Culinária" id="chk4"> <label for="chk4">Culinária</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Política" id="chk5"> <label for="chk5">Política</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Policial" id="chk6"> <label for="chk6">Policial</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Tempo" id="chk7"> <label for="chk7">Tempo</label></span>
+                    <br><br>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Cultura" id="chk8"> <label for="chk8">Cultura</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Economia" id="chk9"> <label for="chk9">Economia</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Jogos" id="chk10"> <label for="chk10">Jogos</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Educação" id="chk11"> <label for="chk11">Educação</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Viagem" id="chk12"> <label for="chk12">Viagem</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Empregos" id="chk13"> <label for="chk13">Empregos</label></span>
+                    <span class="checkbox-label"><input type="checkbox" name="assuntos" value="Moda e Estilo" id="chk14"> <label for="chk14">Moda e Estilo</label></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <input type="checkbox" id="regras" required>
+                    <label for="regras">Li as regras de cadastro e autorizo a criação do usuário</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4" class="header">
+                    <button type="submit">Confirmar</button>
+                    <button type="reset" onclick="limparConfirmacao()">Retomar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <table id="resultado">
+        <tr>
+            <td colspan="2"><strong>Por favor, confirme as informações inseridas antes de enviar:</strong></td>
+        </tr>
+        <tr><td width="30%"><strong>Nome:</strong></td><td id="resNome"></td></tr>
+        <tr><td><strong>Nome Completo:</strong></td><td id="resNomeCompleto"></td></tr>
+        <tr><td><strong>CPF:</strong></td><td id="resCpf"></td></tr>
+        <tr><td><strong>E-mail:</strong></td><td id="resEmail"></td></tr>
+        <tr><td><strong>Web Site:</strong></td><td id="resWebsite"></td></tr>
+        <tr><td><strong>Endereço:</strong></td><td id="resEndereco"></td></tr>
+        <tr><td><strong>Bairro / Cidade:</strong></td><td id="resBairroCidade"></td></tr>
+        <tr><td><strong>CEP / UF:</strong></td><td id="resCepUf"></td></tr>
+        <tr><td><strong>Telefone / Fax:</strong></td><td id="resTelefoneFax"></td></tr>
+        <tr><td><strong>Data Nasc. / Sexo:</strong></td><td id="resDataSexo"></td></tr>
+        <tr><td><strong>Celular / Est. Civil:</strong></td><td id="resCelularEstCivil"></td></tr>
+        <tr><td><strong>Login:</strong></td><td id="resLogin"></td></tr>
+        <tr><td><strong>Assuntos de Interesse:</strong></td><td id="resAssuntos"></td></tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="alert('Dados enviados com sucesso!')">Enviar Dados Corretos</button>
+            </td>
+        </tr>
+    </table>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
